@@ -94,7 +94,7 @@ def prove(formula: Formula):
 
 def validate_format(formula_str):
     """Validate that the input string is in the correct format."""
-    clause_pattern = r"(-?\d+(\s-?\d+)*)" # Regular expression pattern to match clause
+    clause_pattern = r"-?[1-9]\d*(\s-?[1-9]\d*)*" # Regular expression pattern to match clause
     formula_pattern = f"^{clause_pattern}(, {clause_pattern})*$" # Regular expression pattern for entire formula
     return re.match(formula_pattern, formula_str) is not None # Check for match
 
