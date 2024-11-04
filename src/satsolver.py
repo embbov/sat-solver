@@ -17,13 +17,10 @@ def prove(sequent):
     return
 
 def main():
-    if len(sys.argv) == 1:
-        print("No argument provided. Exiting program.")
-        sys.exit(1)
-    elif len(sys.argv) == 2:
+    if len(sys.argv) == 2:
         prove(sys.argv[1])
     else:
-        print("Too many arguments provided. Exiting program.")
+        print("Please provide exactly one argument. Exiting program.")
         sys.exit(1)
 
 if __name__ == "__main__":
